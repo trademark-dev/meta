@@ -1,0 +1,996 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Meta</title>
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <!-- metro ui cdn -->
+    <!-- <link rel="stylesheet" href="https://cdn.metroui.org.ua/current/metro.css"> -->
+    <link rel="stylesheet" href="https://cdn.metroui.org.ua/current/icons.css">
+    <!-- animation scrol -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- font awesome pro cdn -->
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/all.css">
+    <!-- normal awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <!-- other icons cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <!-- bostrap bundle -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- custom css -->
+    <!-- just slider cs cdn -->
+    <link rel="stylesheet" href="plugins9d49.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="bg_darkjhf"></div>
+    <!-- start nav -->
+    <nav class="navbar navbar-expand-lg nav_one" data-bs-theme="dark">
+        <!-- <div style="position: relative; width: 100%;"> -->
+        <div class="container-fluid" style="position: relative; height: 100%; width: 100%; padding: 0;">
+            <button class="btn opne_canvas" style="border: none; background-color: transparent;" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+            <div class="under_color"></div>
+            <div class="trigger">
+                <span></span>
+            </div>
+        </button>
+            <a class="navbar-brand d-none d-lg-block" style="margin-left: -10px;" style="  cursor:pointer; " style="  cursor:pointer; "><img src="https://meta-portal-react.vercel.app/img/logo.png" alt=""></a>
+            <a class="navbar-brand me-auto d-block d-lg-none" style="margin-left: -10px;" style="  cursor:pointer; " style="  cursor:pointer; ">
+                <div class="all_social_contect d-flex">
+                    <span>Fb.</span>
+                    <span> &nbsp / &nbsp </span>
+                    <span>Tw.</span>
+                    <span> &nbsp / &nbsp </span>
+                    <span>In.</span>
+                    <span> &nbsp / &nbsp </span>
+                    <span>Ln.</span>
+                </div>
+            </a>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" style="  cursor:pointer; " style="  cursor:pointer; ">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="  cursor:pointer; ">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="  cursor:pointer; ">Collection</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="  cursor:pointer; ">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="  cursor:pointer; ">Contact</a>
+                    </li>
+                </ul>
+                <div class="wallet d-lg-block">
+                    <a style="  cursor:pointer; " style="  cursor:pointer; " class="wallet_button wallet_opener">
+                        <span style="color: white;"><span class="ewhhwhjw">Connect To</span> Wallet</span>
+                    </a>
+                </div>
+            </div>
+            <div class="wallet d-block d-lg-none">
+                <a style="  cursor:pointer; " style="  cursor:pointer; " class="wallet_button">
+                    <span style="color: white;" class="d-none d-md-block d-lg-none">Connect To Wallet</span>
+                    <span style="color: white;" class="d-block d-md-none">Wallet</span>
+                </a>
+            </div>
+        </div>
+        <!-- </div> -->
+    </nav>
+
+    <!-- canvas body start -->
+    <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasScrollingLabel"></h5>
+            <button type="button" class="oncanvs_close" data-bs-dismiss="offcanvas" aria-label="Close">
+                <div class="trigger" style="margin-top: 0;">
+                    <svg style="width: 32px; margin-top:9px; color:white;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.5859 12L2.79297 4.20706L4.20718 2.79285L12.0001 10.5857L19.793 2.79285L21.2072 4.20706L13.4143 12L21.2072 19.7928L19.793 21.2071L12.0001 13.4142L4.20718 21.2071L2.79297 19.7928L10.5859 12Z"></path></svg>
+                </div>
+            </button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="box_one text-center">
+                <div class="trigger1">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48" viewBox="0,0,256,256" style="fill:#000000;">
+                    <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.33333,5.33333)"><circle cx="24" cy="24" r="20" fill="#000000"></circle><path d="M12,27h7c0,1.491 0.515,2 2,2h7c0.84,0 2.157,-0.287 2.707,-1.316l6.178,-1.798l0.115,1.678c-1.074,0.407 -1.979,0.648 -3.612,3.327c-2.25,3.327 -2.605,3.109 -5.33,3.109h-9.058c-4.08,0 -7,-3 -7,-7z" fill="#ffffff"></path><path d="M19.172,16.034c3.587,4.483 -0.172,8.966 -0.172,8.966h-6z" fill="#ffffff"></path><path d="M21,27h7c0,0 8.207,-5.448 -1.655,-11.724c-2.69,-0.897 -6.345,-1.276 -6.345,-1.276c0,0 6,7 1,13z" fill="#ffffff"></path><path d="M25,12v0c-0.552,0 -1,0.448 -1,1v17h2v-17c0,-0.552 -0.448,-1 -1,-1z" fill="#ffffff"></path></g></g>
+                    </svg>
+                </div>
+                <span>Opensea</span>
+            </div>
+            <div class="box_one text-center">
+                <div class="trigger1">
+                    <svg style="margin-top:10px;" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256" style="fill:#000000;">
+<g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(8.53333,8.53333)"><path d="M25.12,6.946c-2.424,-1.948 -6.257,-2.278 -6.419,-2.292c-0.256,-0.022 -0.499,0.123 -0.604,0.357c-0.004,0.008 -0.218,0.629 -0.425,1.228c2.817,0.493 4.731,1.587 4.833,1.647c0.478,0.278 0.638,0.891 0.359,1.368c-0.185,0.318 -0.52,0.496 -0.864,0.496c-0.171,0 -0.343,-0.043 -0.501,-0.135c-0.028,-0.017 -2.836,-1.615 -6.497,-1.615c-3.662,0 -6.471,1.599 -6.499,1.615c-0.477,0.277 -1.089,0.114 -1.366,-0.364c-0.277,-0.476 -0.116,-1.087 0.36,-1.365c0.102,-0.06 2.023,-1.158 4.848,-1.65c-0.218,-0.606 -0.438,-1.217 -0.442,-1.225c-0.105,-0.235 -0.348,-0.383 -0.604,-0.357c-0.162,0.013 -3.995,0.343 -6.451,2.318c-1.284,1.186 -3.848,8.12 -3.848,14.115c0,0.106 0.027,0.209 0.08,0.301c1.771,3.11 6.599,3.924 7.699,3.959c0.007,0.001 0.013,0.001 0.019,0.001c0.194,0 0.377,-0.093 0.492,-0.25l1.19,-1.612c-2.61,-0.629 -3.99,-1.618 -4.073,-1.679c-0.444,-0.327 -0.54,-0.953 -0.213,-1.398c0.326,-0.443 0.95,-0.541 1.394,-0.216c0.037,0.024 2.584,1.807 7.412,1.807c4.847,0 7.387,-1.79 7.412,-1.808c0.444,-0.322 1.07,-0.225 1.395,0.221c0.324,0.444 0.23,1.066 -0.212,1.392c-0.083,0.061 -1.456,1.048 -4.06,1.677l1.175,1.615c0.115,0.158 0.298,0.25 0.492,0.25c0.007,0 0.013,0 0.019,-0.001c1.101,-0.035 5.929,-0.849 7.699,-3.959c0.053,-0.092 0.08,-0.195 0.08,-0.301c0,-5.994 -2.564,-12.928 -3.88,-14.14zM11,19c-1.105,0 -2,-1.119 -2,-2.5c0,-1.381 0.895,-2.5 2,-2.5c1.105,0 2,1.119 2,2.5c0,1.381 -0.895,2.5 -2,2.5zM19,19c-1.105,0 -2,-1.119 -2,-2.5c0,-1.381 0.895,-2.5 2,-2.5c1.105,0 2,1.119 2,2.5c0,1.381 -0.895,2.5 -2,2.5z"></path></g></g>
+</svg>
+                </div>
+                <span>Discord</span>
+            </div>
+            <div class="under_li_items text-center">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item mt-3">
+                        <a class="nav-link active" aria-current="page" style="  cursor:pointer; " style="  cursor:pointer; ">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="  cursor:pointer; ">Mint Page</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="  cursor:pointer; ">Collectiona</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="  cursor:pointer; ">Pages</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="  cursor:pointer; ">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="  cursor:pointer; ">Blog Single</a>
+                    </li>
+                </ul>
+            </div>
+            <p class="text-center text-order">Copyright 2022 - Designed & <br> Developed by <a style="  cursor:pointer; " style="  cursor:pointer; ">Frenify</a></p>
+            <div class="icons_items">
+                <i class="ri-twitter-fill"></i>
+                <i class="ri-facebook-fill"></i>
+                <i class="ri-instagram-line"></i>
+                <i class="fa-brands fa-pinterest-p"></i>
+                <i class="fa-brands fa-behance"></i>
+            </div>
+        </div>
+    </div>
+    <!-- end body -->
+
+    <nav class="schd_nav d-flex d-block d-lg-none">
+        <a style="  cursor:pointer; " style="  cursor:pointer; " class="me-auto"><img src="https://meta-portal-react.vercel.app/img/logo.png" alt=""></a>
+        <button id="menu_md_onw" style="border: none; background-color: transparent;">
+        <div class="trigger">
+            <i class="ri-menu-2-line"></i>
+        </div>
+    </button>
+    </nav>
+    <div class="daba">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 ">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" style="  cursor:pointer; " style="  cursor:pointer; ">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="  cursor:pointer; ">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="  cursor:pointer; ">Collection</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="  cursor:pointer; ">Blog</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="  cursor:pointer; ">Contact</a>
+            </li>
+        </ul>
+    </div>
+    <!-- end nav -->
+
+    <div class="metaportal_fn_main">
+
+        <!-- start first section slider -->
+        <section id="home">
+            <div class="container">
+
+                <h3 class="fn__maintitle big" data-text="Meta Legends" data-align="center">Meta Legends</h3>
+
+
+
+                <!-- Slider -->
+                <div class="fn_cs_slider" data-responsive="on">
+                    <div class="slider_top">
+                        <img src="img/1x1.jpg" alt="">
+                        <ul>
+                            <li class="prev" data-index="1">
+                                <div class="item">
+                                    <img src="img/1x1.jpg" alt="">
+                                    <div class="item_in">
+                                        <div class="img" data-bg-img="img/slider/1.jpg"></div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="active" data-index="2">
+                                <div class="item">
+                                    <img src="img/1x1.jpg" alt="">
+                                    <div class="item_in">
+                                        <div class="img" data-bg-img="img/slider/2.jpg"></div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="next" data-index="3">
+                                <div class="item has_video">
+                                    <img src="img/1x1.jpg" alt="">
+                                    <a class="popup-youtube metaportal_fn_videobutton" href="https://www.youtube.com/watch?v=7e90gBu4pas">
+                                        <img src="svg/play.svg" alt="" class="fn__svg">
+                                    </a>
+                                    <div class="item_in">
+                                        <div class="img" data-bg-img="img/slider/3.jpg"></div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="next2" data-index="4">
+                                <div class="item">
+                                    <img src="img/1x1.jpg" alt="">
+                                    <div class="item_in">
+                                        <div class="img" data-bg-img="img/slider/4.jpg"></div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li data-index="5">
+                                <div class="item">
+                                    <img src="img/1x1.jpg" alt="">
+                                    <div class="item_in">
+                                        <div class="img" data-bg-img="img/slider/5.jpg"></div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li data-index="6">
+                                <div class="item">
+                                    <img src="img/1x1.jpg" alt="">
+                                    <div class="item_in">
+                                        <div class="img" data-bg-img="img/slider/6.jpg"></div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="prev2" data-index="7">
+                                <div class="item">
+                                    <img src="img/1x1.jpg" alt="">
+                                    <div class="item_in">
+                                        <div class="img" data-bg-img="img/slider/7.jpg"></div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="slider_nav">
+                        <a style="cursor:pointer;" style="cursor:pointer;" class="prev">
+                            <span class="circle"></span>
+                            <span class="icon"><img src="svg/down.svg" alt="" class="fn__svg"></span>
+                            <span class="circle"></span>
+                        </a>
+                        <a style="  cursor:pointer; " style="  cursor:pointer; " class="next">
+                            <span class="circle"></span>
+                            <span class="icon">
+                                <!-- <img src="svg/down.svg" alt="" class="fn__svg"> -->
+                                <svg class="fn__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M13.1717 12.0007L8.22192 7.05093L9.63614 5.63672L16.0001 12.0007L9.63614 18.3646L8.22192 16.9504L13.1717 12.0007Z"></path></svg>
+                            </span>
+                            <span class="circle"></span>
+                        </a>
+                    </div>
+                </div>
+                <!-- !Slider -->
+
+                <!-- Description -->
+                <div class="fn_cs_desc">
+                    <p data-aos="fade-up" data-aos-easing="ease-in-out">Meta Legends represent a collection of 17,000 legends categorized by level of rarity and generated with hundreds of elements. The Legends are stored as ERC-721 tokens on the Ethereum blockchain and hosted on IPFS.</p>
+                    <a data-aos="fade-left" data-aos-easing="ease-in-out" style="  cursor:pointer; " style="  cursor:pointer; " class="metaportal_fn_button" target="_blank"><span>Buy On Opensea</span></a>
+                </div>
+                <!-- !Description -->
+
+
+            </div>
+        </section>
+        <!-- !Home Section -->
+
+
+        <!-- Totop -->
+        <a style="  cursor:pointer; " style="  cursor:pointer; " class="metaportal_fn_totop">
+            <span class="totop_inner">
+			<span class="icon">
+				<img src="svg/down.svg" alt="" class="fn__svg">
+			</span>
+            <span class="text">Scroll To Top</span>
+            </span>
+        </a>
+        <!-- /Totop -->
+        <!-- Searchbox Popup -->
+        <div class="metaportal_fn_search_closer"></div>
+        <div class="metaportal_fn_searchbox">
+            <div class="container small">
+                <div class="searchbox">
+                    <input type="text" placeholder="Search here...">
+                    <a style="  cursor:pointer; " style="  cursor:pointer; ">
+                        <img src="svg/loupe.svg" alt="" class="fn__svg">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- !Searchbox Popup -->
+
+        <!-- Fun Facts -->
+        <section id="fun_facts">
+            <div class="container">
+
+                <div class="fn_cs_counter_list">
+                    <ul>
+                        <li>
+                            <div class="item">
+                                <h3 class="fn__gradient_title">
+                                    <span class="prefix"></span>
+                                    <span class="fn_cs_counter" data-delay="10" data-start-on-viewport="true" data-role="counter" data-value="9999" id="counter">0</span>
+                                    <span class="suffix"></span>
+                                </h3>
+                                <p>Total Items</p>
+                                <div class="divider"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item">
+                                <h3 class="fn__gradient_title">
+                                    <span class="prefix"></span>
+                                    <span class="fn_cs_counter" data-delay="10" data-start-on-viewport="true" data-role="counter" data-value="39" id="counter">0</span>
+                                    <span class="suffix">k+</span>
+                                </h3>
+                                <p>Total Owners</p>
+                                <div class="divider"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item">
+                                <h3 class="fn__gradient_title">
+                                    <span class="prefix"></span>
+                                    <span class="fn_cs_counter" data-delay="10" data-start-on-viewport="true" data-role="counter" data-value="24" id="counter">0</span>
+                                    <span class="suffix">k</span>
+                                </h3>
+                                <p>Floor Price (ETH)</p>
+                                <div class="divider"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item">
+                                <h3 class="fn__gradient_title">
+                                    <span class="prefix"></span>
+                                    <span class="fn_cs_counter" data-delay="10" data-start-on-viewport="true" data-role="counter" data-value="144" id="counter">0</span>
+                                    <span class="suffix">k+</span>
+                                </h3>
+                                <p>Volume Traded (ETH)</p>
+                                <div class="divider"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+        <!-- !Fun Facts -->
+
+
+        <!-- About Section -->
+        <section id="about">
+
+            <!-- About Shortcode -->
+            <div class="fn_cs_about">
+                <div class="left_part">
+                    <div class="img">
+                        <div class="img_in" data-bg-img="img/about/1.jpg"><img src="img/1x1.jpg" alt=""></div>
+                    </div>
+                    <div class="bg_overlay">
+                        <div class="bg_color"></div>
+                        <div class="bg_image" data-bg-img="img/about/bg.jpg"></div>
+                    </div>
+                </div>
+                <div class="right_part">
+                    <div class="right_in">
+                        <h3 class="fn__maintitle" data-text="The Rise of Legends" data-aos="flip-down">The Rise of Legends</h3>
+                        <div class="fn_cs_divider">
+                            <div class="divider">
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="desc">
+                            <p data-aos="fade-left" data-aos-delay="30" data-aos-duration="500" data-aos-easing="ease-in-out">As the first hero of the Meta Legends, collection has over 9,999 unique skins drawn from the different missions and challenges he faced throughout his life.</p>
+                            <p data-aos="fade-left" data-aos-delay="60" data-aos-duration="500" data-aos-easing="ease-in-out">The artwork has been hand-drawned by Robert Green in the traditional anime style and composited by Layla Efiyo.</p>
+                            <p data-aos="fade-left" data-aos-delay="80" data-aos-duration="500" data-aos-easing="ease-in-out">Curabitur pharetra velit eget dignissim varius. In vulputate elit at tortor pellentesque, non pulvinar neque consequat. Aenean tristique odio in libero tincidunt maximus. Nulla pharetra viverra dolor ut blandit. Cras finibus
+                                vel tortor eget lacinia. Pellentesque interdum elit non lacinia faucibus. Morbi nec felis auctor, tincidunt lacus sit amet, iaculis ipsum. Phasellus tempus sit amet justo et feugiat. Duis blandit semper lorem, egestas euismod
+                                ligula pharetra ac. Sed porta lorem eget neque bibendum, eget euismod justo mollis.</p>
+                            <p data-aos="fade-left" data-aos-delay="100" data-aos-duration="500" data-aos-easing="ease-in-out">Donec tristique porttitor sem, eget fermentum elit varius nec. Donec ut orci ipsum. Morbi efficitur felis eget dapibus fermentum. Phasellus sed tellus volutpat, hendrerit leo non, sollicitudin neque. Etiam ac lacus quam. Vivamus
+                                suscipit nisl tellus, at congue odio commodo at. Cras ante enim, sodales at pretium et, tempus at libero.</p>
+                        </div>
+                        <a data-aos="fade-up" data-aos-delay="30" data-aos-duration="500" data-aos-easing="ease-in-out" style="  cursor:pointer; " style="  cursor:pointer; " class="metaportal_fn_button" target="_blank"><span>Find us On Discord</span></a>
+                    </div>
+                </div>
+            </div>
+            <!-- !About Shortcode -->
+
+
+            <div class="container">
+                <!-- Mint Shortcode -->
+                <div class="fn_cs_mint">
+                    <div class="left_part">
+                        <h3 class="fn__maintitle" data-text="How to Mint">How to Mint</h3>
+                        <div class="fn_cs_divider">
+                            <div class="divider">
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="desc">
+                            <p>As the first hero of the Meta Legends, collection has over 9,999 unique skins drawn from the different missions and challenges he faced throughout his life.</p>
+                            <p>The artwork has been hand-drawned by Robert Green in the traditional anime style and composited by Layla Efiyo.</p>
+                            <p>Curabitur pharetra velit eget dignissim varius. In vulputate elit at tortor pellentesque, non pulvinar neque consequat. Aenean tristique odio in libero tincidunt maximus. Nulla pharetra viverra dolor ut blandit. Cras finibus
+                                vel tortor eget lacinia. Pellentesque interdum elit non lacinia faucibus. Morbi nec felis auctor, tincidunt lacus sit amet, iaculis ipsum. Phasellus tempus sit amet justo et feugiat. Duis blandit semper lorem, egestas euismod
+                                ligula pharetra ac. Sed porta lorem eget neque bibendum, eget euismod justo mollis.</p>
+                            <p>Donec tristique porttitor sem, eget fermentum elit varius nec. Donec ut orci ipsum. Morbi efficitur felis eget dapibus fermentum. Phasellus sed tellus volutpat, hendrerit leo non, sollicitudin neque. Etiam ac lacus quam. Vivamus
+                                suscipit nisl tellus, at congue odio commodo at. Cras ante enim, sodales at pretium et, tempus at libero.</p>
+                        </div>
+                        <a data-aos="fade-right" data-aos-delay="30" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos="fade-left" data-aos-delay="30" data-aos-duration="500" data-aos-easing="ease-in-out" href="nft-single.html" class="metaportal_fn_button"><span>How to Mint</span></a>
+                    </div>
+
+                    <div class="right_part">
+
+                        <!-- Steps Shortcode -->
+                        <div class="fn_cs_steps">
+                            <ul>
+                                <li>
+                                    <div data-aos="fade-left" data-aos-delay="30" data-aos-duration="500" data-aos-easing="ease-in-out" class="item">
+                                        <div class="item_in">
+                                            <h3 class="fn__gradient_title">01</h3>
+                                            <p>Connect your Wallet</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div data-aos="fade-left" data-aos-delay="30" data-aos-duration="500" data-aos-easing="ease-in-out" class="item">
+                                        <div class="item_in">
+                                            <h3 class="fn__gradient_title">02</h3>
+                                            <p>Select Your Quantity</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div data-aos="fade-left" data-aos-delay="90" data-aos-duration="500" data-aos-easing="ease-in-out" class="item">
+                                        <div class="item_in">
+                                            <h3 class="fn__gradient_title">03</h3>
+                                            <p>Confirm The Transaction</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div data-aos="fade-left" data-aos-delay="90" data-aos-duration="500" data-aos-easing="ease-in-out" class="item">
+                                        <div class="item_in">
+                                            <h3 class="fn__gradient_title">04</h3>
+                                            <p>Receive Your NFT’s</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- !Steps Shortcode -->
+
+                        <!-- Video Shortcode -->
+                        <div class="fn_cs_video">
+                            <img src="img/video/1.jpg" alt="">
+                            <a class="popup-youtube" href="https://www.youtube.com/watch?v=7e90gBu4pas">
+                                <img src="svg/play.svg" alt="" class="fn__svg">
+                            </a>
+                        </div>
+                        <!-- /Video Shortcode -->
+
+                    </div>
+
+                </div>
+                <!-- !Mint Shortcode -->
+            </div>
+
+        </section>
+        <!-- !About Section -->
+
+        <!-- Section Divider -->
+        <div class="fn_cs_section_divider">
+            <div class="divider">
+                <span class="short"></span>
+                <span class="long"></span>
+                <span class="short"></span>
+            </div>
+        </div>
+        <!-- !Section Divider -->
+
+        <!-- Collection Section -->
+        <section id="collection">
+            <div class="container">
+
+                <h3 data-aos="flip-up" class="fn__maintitle big" data-text="Our Collection" data-align="center">Our Collection</h3>
+
+                <div class="fn_cs_collection">
+                    <div class="collection_top">
+                        <div class="item" data-aos="fade-right" data-aos-duration="1000">
+                            <div class="item_in">
+                                <div class="img">
+                                    <div class="abs_img" data-bg-img="img/collection/1.jpg"></div>
+                                    <img src="img/1x1.jpg" alt="">
+                                </div>
+                            </div>
+                            <input type="hidden" value="img/collection/1.jpg">
+                        </div>
+                        <div class="item" data-aos="fade-up" data-aos-duration="1000">
+                            <div class="item_in">
+                                <div class="img">
+                                    <div class="abs_img" data-bg-img="img/collection/2.jpg"></div>
+                                    <img src="img/1x1.jpg" alt="">
+                                </div>
+                            </div>
+                            <input type="hidden" value="img/collection/2.jpg">
+                        </div>
+                        <div class="item" data-aos="fade-up" data-aos-duration="1000">
+                            <div class="item_in">
+                                <div class="img">
+                                    <div class="abs_img" data-bg-img="img/collection/3.jpg"></div>
+                                    <img src="img/1x1.jpg" alt="">
+                                </div>
+                            </div>
+                            <input type="hidden" value="img/collection/3.jpg">
+                        </div>
+                        <div class="item" data-aos="fade-left" data-aos-duration="1000">
+                            <div class="item_in">
+                                <div class="img">
+                                    <div class="abs_img" data-bg-img="img/collection/4.jpg"></div>
+                                    <img src="img/1x1.jpg" alt="">
+                                </div>
+                            </div>
+                            <input type="hidden" value="img/collection/4.jpg">
+                        </div>
+                    </div>
+                    <div class="collection_bottom">
+                        <div class="item" data-aos="fade-right" data-aos-duration="1000">
+                            <div class="item_in">
+                                <div class="img">
+                                    <div class="abs_img" data-bg-img="img/collection/5.jpg"></div>
+                                    <img src="img/1x1.jpg" alt="">
+                                </div>
+                            </div>
+                            <input type="hidden" value="img/collection/5.jpg">
+                        </div>
+                        <div class="item" data-aos="fade-up" data-aos-duration="1000">
+                            <div class="item_in">
+                                <div class="img">
+                                    <div class="abs_img" data-bg-img="img/collection/6.jpg"></div>
+                                    <img src="img/1x1.jpg" alt="">
+                                </div>
+                            </div>
+                            <input type="hidden" value="img/collection/6.jpg">
+                        </div>
+                        <div class="item" data-aos="fade-up" data-aos-duration="1000">
+                            <div class="item_in">
+                                <div class="img">
+                                    <div class="abs_img" data-bg-img="img/collection/7.jpg"></div>
+                                    <img src="img/1x1.jpg" alt="">
+                                </div>
+                            </div>
+                            <input type="hidden" value="img/collection/7.jpg">
+                        </div>
+                        <div class="item" data-aos="fade-left" data-aos-duration="1000">
+                            <div class="item_in">
+                                <div class="img">
+                                    <div class="abs_img" data-bg-img="img/collection/8.jpg"></div>
+                                    <img src="img/1x1.jpg" alt="">
+                                </div>
+                            </div>
+                            <input type="hidden" value="img/collection/8.jpg">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fn_cs_desc">
+                    <p data-aos="fade-up" data-aos-duration="700">Meta Legends represent a collection of 17,000 legends categorized by level of rarity and generated with hundreds of elements. The Legends are stored as ERC-721 tokens on the Ethereum blockchain and hosted on IPFS.</p>
+                    <a data-aos="fade-right" data-aos-duration="1000" href="collection.html" class="metaportal_fn_button"><span>See All Collection</span></a>
+                </div>
+
+            </div>
+        </section>
+        <!-- !Collection Section -->
+
+
+        <!-- Section Divider -->
+        <div class="fn_cs_section_divider">
+            <div class="divider">
+                <span class="short"></span>
+                <span class="long"></span>
+                <span class="short"></span>
+            </div>
+        </div>
+        <!-- !Section Divider -->
+
+
+        <!-- Section RoadMap -->
+        <section id="roadmap">
+            <div class="container">
+
+                <h3 data-aos="flip-up" data-aos-duration="1000" class="fn__maintitle big" data-text="RoadMap" data-align="center">RoadMap</h3>
+
+                <div class="fn_cs_roadmap">
+                    <div class="step_holder">
+                        <div class="step_in"></div>
+                    </div>
+                    <div class="slider_holder">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <span class="icon"></span>
+                                        <span class="phase">Phase 01</span>
+                                        <div class="item_in">
+                                            <p class="date">October 09, 2022</p>
+                                            <h3 class="title">Mini Game Lounch For Community</h3>
+                                            <p class="desc">Morbi non dignissim erat, a blandit felis. Suspendisse nec lorem vel orci varius congue ut vitae est. Nam quis tempus nisl. Fusce posuere nibh a mi molestie, sit amet ornare lectus interdum.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <span class="icon"></span>
+                                        <span class="phase">Phase 02</span>
+                                        <div class="item_in">
+                                            <p class="date">October 17, 2022</p>
+                                            <h3 class="title">New Set #12 is Coming Up</h3>
+                                            <p class="desc">Morbi non dignissim erat, a blandit felis. Suspendisse nec lorem vel orci varius congue ut vitae est. Nam quis tempus nisl. Fusce posuere nibh a mi molestie, sit amet ornare lectus interdum.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <span class="icon"></span>
+                                        <span class="phase">Phase 03</span>
+                                        <div class="item_in">
+                                            <p class="date">October 28, 2022</p>
+                                            <h3 class="title">Metaverse 3.0 Launch</h3>
+                                            <p class="desc">Morbi non dignissim erat, a blandit felis. Suspendisse nec lorem vel orci varius congue ut vitae est. Nam quis tempus nisl. Fusce posuere nibh a mi molestie, sit amet ornare lectus interdum.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <span class="icon"></span>
+                                        <span class="phase">Phase 04</span>
+                                        <div class="item_in">
+                                            <p class="date">November 11, 2022</p>
+                                            <h3 class="title">Female Set #20 is Coming Up</h3>
+                                            <p class="desc">Morbi non dignissim erat, a blandit felis. Suspendisse nec lorem vel orci varius congue ut vitae est. Nam quis tempus nisl. Fusce posuere nibh a mi molestie, sit amet ornare lectus interdum.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <span class="icon"></span>
+                                        <span class="phase">Phase 05</span>
+                                        <div class="item_in">
+                                            <p class="date">November 23, 2022</p>
+                                            <h3 class="title">Mini Game Lounch For Community</h3>
+                                            <p class="desc">Morbi non dignissim erat, a blandit felis. Suspendisse nec lorem vel orci varius congue ut vitae est. Nam quis tempus nisl. Fusce posuere nibh a mi molestie, sit amet ornare lectus interdum.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <span class="icon"></span>
+                                        <span class="phase">Phase 06</span>
+                                        <div class="item_in">
+                                            <p class="date">December 02, 2022</p>
+                                            <h3 class="title">Mini Game Lounch For Community</h3>
+                                            <p class="desc">Morbi non dignissim erat, a blandit felis. Suspendisse nec lorem vel orci varius congue ut vitae est. Nam quis tempus nisl. Fusce posuere nibh a mi molestie, sit amet ornare lectus interdum.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <span class="icon"></span>
+                                        <span class="phase">Phase 07</span>
+                                        <div class="item_in">
+                                            <p class="date">January 14, 2023</p>
+                                            <h3 class="title">Mini Game Lounch For Community</h3>
+                                            <p class="desc">Morbi non dignissim erat, a blandit felis. Suspendisse nec lorem vel orci varius congue ut vitae est. Nam quis tempus nisl. Fusce posuere nibh a mi molestie, sit amet ornare lectus interdum.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <span class="icon"></span>
+                                        <span class="phase">Phase 08</span>
+                                        <div class="item_in">
+                                            <p class="date">January 28, 2023</p>
+                                            <h3 class="title">Mini Game Lounch For Community</h3>
+                                            <p class="desc">Morbi non dignissim erat, a blandit felis. Suspendisse nec lorem vel orci varius congue ut vitae est. Nam quis tempus nisl. Fusce posuere nibh a mi molestie, sit amet ornare lectus interdum.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <span class="icon"></span>
+                                        <span class="phase">Phase 09</span>
+                                        <div class="item_in">
+                                            <p class="date">February 12, 2023</p>
+                                            <h3 class="title">Mini Game Lounch For Community</h3>
+                                            <p class="desc">Morbi non dignissim erat, a blandit felis. Suspendisse nec lorem vel orci varius congue ut vitae est. Nam quis tempus nisl. Fusce posuere nibh a mi molestie, sit amet ornare lectus interdum.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- !Section RoadMap -->
+
+
+        <!-- Section Divider -->
+        <div class="fn_cs_section_divider">
+            <div class="divider">
+                <span class="short"></span>
+                <span class="long"></span>
+                <span class="short"></span>
+            </div>
+        </div>
+        <!-- !Section Divider -->
+
+
+        <!-- Section News -->
+        <section id="news">
+            <div class="container">
+
+                <h3 data-aos="flip-up" data-aos-duration="900" class="fn__maintitle big" data-text="Latest Articles" data-align="center">Latest Articles</h3>
+
+                <!-- News Shotcode -->
+                <div class="fn_cs_news">
+                    <div class="news_part">
+                        <div class="left_items">
+                            <div class="blog__item" data-aos="fade-up" data-aos-duration="2000">
+                                <div class="counter">
+                                    <span class="cc"><span>01</span></span>
+                                </div>
+                                <div class="meta">
+                                    <p>August 09, 2022 / MetaVerse / 4 Comments</p>
+                                </div>
+                                <div class="title">
+                                    <h3><a href="blog-single.html">Reasons Why People Use Discord</a></h3>
+                                </div>
+                                <div class="image">
+                                    <a href="blog-single.html">
+                                        <img style="width: 100%; object-fit: cover; object-position: center;" src="img/blog/1.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="read_more">
+                                    <a href="blog-single.html"><span>Read More</span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right_items">
+                            <div class="blog__item" data-aos-delay="100" data-aos="fade-left" data-aos-duration="1000">
+                                <div class="counter">
+                                    <span class="cc"><span>02</span></span>
+                                </div>
+                                <div class="meta">
+                                    <p>August 09, 2022 / MetaVerse / 4 Comments</p>
+                                </div>
+                                <div class="title">
+                                    <h3><a href="blog-single.html">Trial-By-Combat: The Death Cup</a></h3>
+                                </div>
+                                <div class="read_more">
+                                    <a href="blog-single.html"><span>Read More</span></a>
+                                </div>
+                            </div>
+                            <div class="blog__item" data-aos-delay="100" data-aos="fade-left" data-aos-duration="2000">
+                                <div class="counter">
+                                    <span class="cc"><span>03</span></span>
+                                </div>
+                                <div class="meta">
+                                    <p>August 09, 2022 / NFT / 4 Comments</p>
+                                </div>
+                                <div class="title">
+                                    <h3><a href="blog-single.html">Graffiti Racer Research Center #10</a></h3>
+                                </div>
+                                <div class="read_more">
+                                    <a href="blog-single.html"><span>Read More</span></a>
+                                </div>
+                            </div>
+                            <div class="blog__item" data-aos-delay="100" data-aos="fade-left" data-aos-duration="2500">
+                                <div class="counter">
+                                    <span class="cc"><span>04</span></span>
+                                </div>
+                                <div class="meta">
+                                    <p>August 09, 2022 / MetaVerse / 4 Comments</p>
+                                </div>
+                                <div class="read_more">
+                                    <a href="blog-single.html"><span>Read More</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom_part">
+                        <div class="left_bot" data-aos-delay="190" data-aos="fade-right" data-aos-duration="1000">
+                            <a style="  cursor:pointer; " style="  cursor:pointer; " class="metaportal_fn_button full"><span>Read All Articles</span></a>
+                        </div>
+                        <div class="right_bot">
+                            <p data-aos-delay="190" data-aos="fade-left" data-aos-duration="1000">We’re a team of creatives who are excited about unique ideas and create consectetur adipiscing elit. Etiam vitae purus a lectus semper.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- !News Shotcode -->
+
+            </div>
+        </section>
+        <!-- !Section News -->
+
+
+        <!-- Section Divider -->
+        <div class="fn_cs_section_divider">
+            <div class="divider">
+                <span class="short"></span>
+                <span class="long"></span>
+                <span class="short"></span>
+            </div>
+        </div>
+        <!-- !Section Divider -->
+
+        <!-- Section -->
+        <section id="contact">
+            <div class="container">
+
+                <h3 data-aos="fade-right" data-aos-duration="1000" class="fn__maintitle big" data-text="Contact Us" data-align="center">Contact Us</h3>
+
+                <div class="fn_cs_contact_info">
+                    <ul>
+                        <li>
+                            <div class="item">
+                                <p data-aos="fade-right" data-aos-delay="80" data-aos-duration="1400">Duis suscipit egestas ullamcorper. Cras porta nulla et tristique pellentesque. Praesent finibus mauris eu sollicitudin interdum. Morbi et blandit quam. Donec vitae massa purus. Curabitur nunc mauris, iaculis a nibh at,
+                                    ultricies sodales dolor.</p>
+                                <p data-aos="fade-right" data-aos-delay="120" data-aos-duration="1900">Curabitur pharetra velit eget dignissim varius. In vulputate elit at tortor pellentesque, non pulvinar neque consequat.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item" data-aos="zoom-in" data-aos-delay="120" data-aos-duration="1900">
+                                <h4 class="label">Phone</h4>
+                                <h3><a style="  cursor:pointer; " style="  cursor:pointer; ">+77 022 177 05 05</a></h3>
+                                <h4 class="lable">Email</h4>
+                                <h3><a style="  cursor:pointer; " style="  cursor:pointer; ">frenifyteam@gmail.com</a></h3>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item" data-aos="fade-left" data-aos-delay="120" data-aos-duration="1900">
+                                <h4 class="label">Office</h4>
+                                <h3>124 S Main St, Scottville, MI 49454, United States</h3>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="fn_cs_contact_form">
+                    <form action="#" method="post" class="contact_form" id="contact_form" autocomplete="off">
+                        <div class="input_list">
+                            <ul>
+                                <li>
+                                    <input id="name" type="text" placeholder="Your Name *" />
+                                </li>
+                                <li>
+                                    <input id="email" type="text" placeholder="Your Email *" />
+                                </li>
+                                <li>
+                                    <input id="tel" type="text" placeholder="Your Phone (optional)" />
+                                </li>
+                                <li>
+                                    <input id="subject" type="text" placeholder="Topic (optional)" />
+                                </li>
+                                <li class="full">
+                                    <textarea id="message" placeholder="Your Message *"></textarea>
+                                </li>
+                                <li class="full">
+                                    <label class="fn__checkbox">
+										<input type="checkbox">
+										<span class="fn__checkmark">
+											<img src="svg/checked.svg" alt="" class="fn__svg">
+										</span>
+										<p>I’m okay with getting emails and having that activity tracked to improve my experience.</p>
+									</label>
+                                    <div class="mw300">
+                                        <a style="  cursor:pointer; " style="  cursor:pointer; " class="metaportal_fn_button full">
+                                            <span>Send Message</span>
+                                        </a>
+                                    </div>
+
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="returnmessage" data-success="Your message has been received, We will contact you soon."></div>
+                        <div class="empty_notice"><span>! Please Fill Required Fields !</span></div>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="container">
+                <div class="footer">
+                    <div class="left_part">
+                        <p>Copyright 2023 — Designed &amp; Developed by <a style="  cursor:pointer; " style="  cursor:pointer; " target="_blank">Frenify</a></p>
+                    </div>
+                    <div class="right_part">
+                        <ul>
+                            <li><a class="creative_link" href="/">Privacy Policy</a></li>
+                            <li><a class="creative_link" href="/">Cookies</a></li>
+                            <li><a class="creative_link" href="/">Terms &amp; Conditions</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- !Footer -->
+        <!-- Social -->
+        <div id="social">
+            <div class="social">
+                <h4 class="title">Follow Us:</h4>
+                <ul>
+                    <li><a style=" cursor:pointer;" style=" cursor:pointer;" target="_blank">Fb.</a></li>
+                    <li><a style=" cursor:pointer;" style=" cursor:pointer;" target="_blank">Tw.</a></li>
+                    <li><a style=" cursor:pointer;" style=" cursor:pointer;" target="_blank">In.</a></li>
+                    <li><a style=" cursor:pointer;" style=" cursor:pointer;" target="_blank">Ln.</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- !Social -->
+
+        <!-- Search Button -->
+        <a style="  cursor:pointer; " style="  cursor:pointer; " class="metaportal_fn_search">
+            <span class="icon">
+			<img src="svg/loupe.svg" alt="dd" class="fn__svg">
+		</span>
+        </a>
+        <!-- !Search Button -->
+
+    </div>
+
+
+    <!-- Totop -->
+    <a style="  cursor:pointer; " style="  cursor:pointer; " class="metaportal_fn_totop">
+        <span class="totop_inner">
+			<span class="icon">
+				<img src="svg/down.svg" alt="" class="fn__svg">
+			</span>
+        <span class="text">Scroll To Top</span>
+        </span>
+    </a>
+    <!-- /Totop -->
+
+
+    <!-- bostrap bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js ">
+    </script>
+    <!-- metro ui cdn -->
+    <script src="https://cdn.metroui.org.ua/current/metro.js"></script>
+    <!-- animation scrol -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- jquery cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js "></script>
+    <!-- gsap cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <!-- scrol triger plugin gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <!-- custom js -->
+    <!-- just slider js -->
+    <script src="init9d49.js"></script>
+    <script src="plugins9d49.js"></script>
+    <!-- <script src="/jquery9d49.js"></script> -->
+    <script src="js/ap.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
